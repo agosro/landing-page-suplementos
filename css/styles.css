@@ -6,22 +6,25 @@
     --font-family: 'Arial', sans-serif;
 }
 
-html, body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    overflow-x: hidden; /* ✅ evita scroll horizontal */
+}
 
 .header {
     background-color: #f4f4f4;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    width: auto;
-    height: 80px;
-    box-sizing:border-box ;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -30,7 +33,7 @@ html, body {
     padding: 10px;
 }
 
-.header nav {
+.nav {
     display: flex;
     gap: 20px; /* espacio entre links */
 }
@@ -41,7 +44,6 @@ html, body {
     margin-left: 20px;
     font-weight: 600;
     font-family: Arial, sans-serif;
-    
 }
 
 
@@ -158,7 +160,7 @@ html, body {
     width: 100%;
     transition: transform 0.3s ease;
     font-family: var(--font-family);
-    color: #292929
+    color: #292929;
     }
 
 .tarjeta:hover {
@@ -246,3 +248,23 @@ footer p {
     margin: 0;
     letter-spacing: 0.5px;
 }
+
+@media (max-width: 440px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav a {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+} 
