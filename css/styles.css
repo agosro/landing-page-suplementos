@@ -1,0 +1,248 @@
+:root {
+    --color-primario: #123c3f;
+    --color-secundario: #439c83;
+    --color-terciario: #bfcfcd;
+    --text-color: #292929;
+    --font-family: 'Arial', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.header {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 80px;
+    box-sizing:border-box ;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    padding: 10px;
+}
+
+.header nav {
+    display: flex;
+    gap: 20px; /* espacio entre links */
+}
+
+.header nav a {
+    color: #555454; 
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('../img/fondo.png') center center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* para que no se salga el ::before */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* negro con 50% transparencia */
+    z-index: 1;
+}
+
+/* El contenido debe estar por encima del overlay */
+.contenido-hero {
+    position: relative;
+    z-index: 2;
+}
+
+.contenido-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Arial Black', Arial, sans-serif;
+}
+
+.contenido-hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+.btn {
+    background-color: #123c3f; 
+    color: #bfcfcd;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-family: var(--font-family);
+}
+
+.btn:hover {
+    background-color: rgb(46, 126, 103);; /* verde más intenso al hover */
+    color: #ffffff;
+}
+
+
+.suplementos {
+    padding: 60px 20px;
+    background-color: #f4f4f4; /* color claro de fondo para contrastar */
+    text-align: center;
+}
+
+.suplementos h2, .beneficios h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #2e3235;  
+    max-width: 600px; /* limitar ancho para que no se vea tan ancho */
+    line-height: 1.2;
+    letter-spacing: 0.02em; /* espacio entre letras más estrecho */
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+/* Línea decorativa debajo */
+.suplementos h2::after, .beneficios h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #2e3235;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+/* Contenedor que agrupa las tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 250px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    font-family: var(--font-family);
+    color: #292929
+    }
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3{
+    font-size: 1.3rem;
+    color: #363e42;
+    margin-bottom: 10px;
+}
+
+.tarjeta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tarjeta ul li {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+.beneficios {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.beneficio {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    color: #333;
+    padding: 20px;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio i {
+    color: #439c83;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.beneficio h3 {
+    font-size: 1.3rem;
+    color: #363e42;
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #586F7C;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
