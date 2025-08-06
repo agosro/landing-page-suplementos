@@ -34,13 +34,16 @@ Green Sups es una página web tipo landing page que muestra información clara y
 ---
 
 ## 📁 Estructura del proyecto
+
+```plaintext
 green-sups/
 │
 ├── index.html           # Página principal
 ├── css/
 │   └── styles.css       # Archivo CSS con todos los estilos
 ├── img/
-└── README.md     
+└── README.md            # Documentación del proyecto
+```
 
 ---
 
