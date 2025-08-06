@@ -12,11 +12,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f9f9f9;
     color: #000;
-    overflow-x: hidden; /* ✅ evita scroll horizontal */
 }
 
 .header {
@@ -49,7 +55,7 @@ body {
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background: url('../img/fondo.png') center center/cover no-repeat;
     display: flex;
     justify-content: center;
@@ -159,7 +165,7 @@ body {
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 20px;
+    padding: 1rem;
     max-width: 250px;
     width: 100%;
     transition: transform 0.3s ease;
