@@ -49,8 +49,11 @@ green-sups/
 
 ## 📥 Cómo ejecutar
 
-1. Clonar repositorio ($git clone git@github.com:agosro/landing-page-suplementos.git)
-2. Abrir `index.html` en el navegador.
+1. Clonar repositorio
+ ```bash
+   git clone git@github.com:agosro/landing-page-suplementos.git
+ ```
+3. Abrir `index.html` en el navegador.
 
  ---
 
